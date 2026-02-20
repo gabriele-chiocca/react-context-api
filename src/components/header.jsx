@@ -1,9 +1,9 @@
 import { NavLink } from 'react-router-dom';
-
+import { use, useState } from 'react';
 import { useBudget } from '../contexts/BudgetContext';
 
 export default function Header() {
-  const { budgetMode, toggleBudget } = useBudget;
+  const { budgetMode, toggleBudget } = useBudget();
 
   return (
     <>
@@ -43,12 +43,12 @@ export default function Header() {
           </ul>
           <div className="navbar-nav ms-3">
             <button
-              className={`nav-item btn ${budgetMode ? 'btn-primary' : 'btn-danger'}`}
+              className={`nav-item btn ${budgetMode ? 'btn-danger' : 'btn-primary'}`}
               onClick={toggleBudget}
             >
               {budgetMode
-                ? 'Attiva modalità budget'
-                : 'Disattiva modalità budget'}
+                ? 'Disattiva modalità budget'
+                : 'Attiva modalità budget'}
             </button>
           </div>
         </div>
