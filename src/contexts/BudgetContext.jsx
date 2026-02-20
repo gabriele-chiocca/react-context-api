@@ -16,4 +16,8 @@ function BudgetProvider({ children }) {
   );
 }
 
-export { BudgetProvider };
+function useBudget() {
+  return useContext(BudgetContext);
+}
+
+export { BudgetProvider, useBudget };
