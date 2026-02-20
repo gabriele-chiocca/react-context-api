@@ -5,12 +5,12 @@ import ProductsPage from './pages/ProductsPage';
 import DefaultLayout from './layouts/DefaultLayout';
 import SingleProduct from './pages/SingleProduct';
 import NotFound from './pages/NotFound';
-import { ProductProvider } from './contexts/ProductContext';
+import { BudgetProvider } from './contexts/BudgetContext';
 
 function App() {
   return (
     <>
-      <ProductProvider>
+      <BudgetProvider>
         <BrowserRouter>
           <Routes>
             <Route Component={DefaultLayout}>
@@ -23,7 +23,7 @@ function App() {
             </Route>
           </Routes>
         </BrowserRouter>
-      </ProductProvider>
+      </BudgetProvider>
     </>
   );
 }
